@@ -16,7 +16,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // console.log("hey");
     filterHandler();
     saveLocalTodos();
   }, [todos, status]);
