@@ -1,5 +1,5 @@
-# Quick Notes
-* A simple SPA that lets user to jote down immediate notes, points, tasks, etc.
+# To Do App
+* A simple SPA that lets user to jote down immediate tasks to be done and has ability mark them as completed or incompleted.
 
 ## Tech Used
 * ReactJs
@@ -7,14 +7,18 @@
 * HTML
 
 ## Steps To Run
-``
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- In the project directory, you can run:
+```
 npm install
 ```
 ```
 npm start
 ```
-
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser. Runs the app in the development mode.
 
 ---
 
 # Author
+* Name - Abhinav
+* GitHub - [github.com/abhinavg916](https://github.com/abhinavg916)
