@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Abhinav's To Do</h1>
+        <h1>To Do</h1>
       </header>
       <Form
         inputText={inputText}
