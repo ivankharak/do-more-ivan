@@ -1,7 +1,7 @@
 # To Do App
 > "_Plan less. Do more!_"
 
-* A simple SPA that lets user to jote down immediate tasks to be done and has ability mark them as completed or incompleted.
+* A simple SPA, based upon minimalism theme, that lets user to jot down immediate tasks to be done and has ability mark them as completed or incompleted.
 
 ## Tech Used
 * ReactJs
