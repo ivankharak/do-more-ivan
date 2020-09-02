@@ -5,14 +5,14 @@ import TodoList from "./components/TodoList.js";
 
 function App() {
   const [inputText, setInputText] = useState("");
-  const [todo, setTodos] = useState([]);
+  const [todos, setTodos] = useState([]);
 
   return (
     <div className="App">
       <header>
         <h1>Quick Notes</h1>
       </header>
-      <Form setInputText={setInputText}/>
+      <Form inputTest={inputText} todos ={todos}  setTodos={setTodos} setInputText={setInputText}/>
       <TodoList />
     </div>
   );
