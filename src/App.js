@@ -5,15 +5,20 @@ import TodoList from "./components/TodoList.js";
 import Todo from "./components/Todo";
 
 function App() {
-
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   useEffect(() => {
+    // Runs only once when app starts
+    getLocalTodos();
+  }, []);
+
+  useEffect(() => {
     // console.log("hey");
     filterHandler();
+    saveLocalTodos();
   }, [todos, status]);
 
   const filterHandler = () => {
@@ -30,6 +35,21 @@ function App() {
     }
   };
 
+  // Saving to local
+  const saveLocalTodos = () => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
+
+  // Checking in local
+  const getLocalTodos = () => {
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      let todoLocal = JSON.parse(localStorage.getItem("todos"));
+      setTodos(todoLocal);
+    }
+  };
+
   return (
     <div className="App">
       <header>
@@ -42,8 +62,12 @@ function App() {
         setInputText={setInputText}
         setStatus={setStatus}
       />
-      <TodoList  filteredTodos = {filteredTodos} setTodos={setTodos} todos={todos} />
-    </div> 
+      <TodoList
+        filteredTodos={filteredTodos}
+        setTodos={setTodos}
+        todos={todos}
+      />
+    </div>
   );
 }
 
