@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList.js";
-// import Todo from "./components/Todo";
 
 function App() {
   const [inputText, setInputText] = useState("");
@@ -16,28 +15,28 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const filterHandler = () => {
+      switch (status) {
+        case "completed":
+          setFilteredTodos(todos.filter((todo) => todo.completed === true));
+          break;
+        case "uncompleted":
+          setFilteredTodos(todos.filter((todo) => todo.completed === false));
+          break;
+        default:
+          setFilteredTodos(todos);
+          break;
+      }
+    };
+
+    // Saving to local
+    const saveLocalTodos = () => {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    };
+
     filterHandler();
     saveLocalTodos();
   }, [todos, status]);
-
-  const filterHandler = () => {
-    switch (status) {
-      case "completed":
-        setFilteredTodos(todos.filter((todo) => todo.completed === true));
-        break;
-      case "uncompleted":
-        setFilteredTodos(todos.filter((todo) => todo.completed === false));
-        break;
-      default:
-        setFilteredTodos(todos);
-        break;
-    }
-  };
-
-  // Saving to local
-  const saveLocalTodos = () => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  };
 
   // Checking in local
   const getLocalTodos = () => {
