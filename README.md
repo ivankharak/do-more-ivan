@@ -1,4 +1,4 @@
-# Do More App
+# Do More
 
 > "_Plan less. Do more!_"
 
