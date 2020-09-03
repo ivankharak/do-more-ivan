@@ -7,7 +7,7 @@
 body {
   background-color: #ecf0f1;
   color: black;
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
   min-height: 100vh;
 }
 
@@ -129,7 +129,7 @@ select {
 
 select {
   color: #3498db;
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, sans-serif;
   cursor: pointer;
   width: 12rem;
 }
