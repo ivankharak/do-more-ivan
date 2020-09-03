@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList.js";
-import Todo from "./components/Todo";
+// import Todo from "./components/Todo";
 
 function App() {
   const [inputText, setInputText] = useState("");
@@ -52,9 +52,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>
-          To Do <em>"Plan less. Do more!"</em>{" "}
-        </h1>
+        <h1>Do More</h1>
       </header>
       <Form
         inputText={inputText}
