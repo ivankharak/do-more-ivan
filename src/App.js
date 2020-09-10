@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Do More</h1>
+        <h1>Do More</h1> <br />
         <p><em>Plan less. Do more!</em></p>
       </header>
       <Form
