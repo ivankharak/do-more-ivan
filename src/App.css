@@ -16,7 +16,7 @@ header {
 }
 
 header,
-form {
+form, p {
   min-height: 20vh;
   display: flex;
   justify-content: center;
