@@ -51,9 +51,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Do More</h1> <br />
-        <p><em>Plan less. Do more!</em></p>
+        <h1>Do More</h1>
       </header>
+        <p><em>Plan less. Do more!</em></p>
       <Form
         inputText={inputText}
         todos={todos}

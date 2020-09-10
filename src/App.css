@@ -15,8 +15,15 @@ header {
   font-size: 2rem;
 }
 
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
 header,
-form, p {
+form {
   min-height: 20vh;
   display: flex;
   justify-content: center;
