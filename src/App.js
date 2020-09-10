@@ -52,6 +52,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Do More</h1>
+        <p><em>Plan less. Do more!</em></p>
       </header>
       <Form
         inputText={inputText}
