@@ -8,7 +8,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
-
+  const [isErr, setIsErr] = useState(false);
   useEffect(() => {
     // Runs only once when app starts
     getLocalTodos();
@@ -53,19 +53,26 @@ function App() {
       <header>
         <h1>Do More</h1>
       </header>
-        <p><em>Plan less. Do more!</em></p>
+      <p>
+        <em>Plan less. Do more!</em>
+      </p>
+
       <Form
         inputText={inputText}
         todos={todos}
         setTodos={setTodos}
         setInputText={setInputText}
         setStatus={setStatus}
+        setIsErr={setIsErr}
       />
       <TodoList
         filteredTodos={filteredTodos}
         setTodos={setTodos}
         todos={todos}
       />
+      <p>
+        <em>{isErr ? "Input is empty" : ""}</em>
+      </p>
     </div>
   );
 }

@@ -1,17 +1,29 @@
 import React from "react";
 
-const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
+const Form = ({
+  setInputText,
+  todos,
+  setTodos,
+  inputText,
+  setStatus,
+  setIsErr,
+}) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
 
   const submitTodoHandler = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos,
-      { text: inputText, completed: false, id: Math.random() * 1000 },
-    ]);
-    setInputText("");
+    if (inputText) {
+      setIsErr(false);
+      setTodos([
+        ...todos,
+        { text: inputText, completed: false, id: Math.random() * 1000 },
+      ]);
+      setInputText("");
+    } else {
+      setIsErr(true);
+    }
   };
 
   const statusHandler = (e) => {
