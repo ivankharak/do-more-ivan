@@ -42,5 +42,5 @@ npm run build
 
 ## Author
 
-- Name - Abhinav
-- GitHub - [github.com/abhinavg916](https://github.com/abhinavg916)
+- Name - Ivan
+- GitHub - [github.com/Ivan](https://github.com/ivankharak)
